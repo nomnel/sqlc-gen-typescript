@@ -70,3 +70,12 @@ sql:
     options:
       runtime: node
       driver: better-sqlite3
+- schema: "authors/mysql/schema.sql"
+  queries: "authors/mysql/query.sql"
+  engine: "mysql"
+  codegen:
+  - plugin: ts
+    out: node-tidbcloud-serverless/src/db
+    options:
+      runtime: node
+      driver: tidbcloud-serverless
